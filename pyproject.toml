@@ -3,9 +3,7 @@ name = "datanomy"
 version = "0.3.0"
 description = "Explore the anatomy of your columnar data files (Parquet, Arrow, and more)"
 readme = "README.md"
-authors = [
-    { name = "Raúl Cumplido", email = "raulcumplido@gmail.com" }
-]
+authors = [{ name = "Raúl Cumplido", email = "raulcumplido@gmail.com" }]
 requires-python = ">=3.10"
 dependencies = [
     "textual>=0.90.0",
@@ -45,9 +43,11 @@ ignore_missing_imports = true
 requires = ["uv_build>=0.9.7,<0.10.0"]
 build-backend = "uv_build"
 
+[tool.setuptools.package-data]
+
 [tool.pixi.workspace]
 channels = ["conda-forge"]
-platforms = ["linux-64"]
+platforms = ["linux-64", "osx-arm64", "osx-64", "win-64"]
 
 [tool.pixi.pypi-dependencies]
 datanomy = { path = ".", editable = true }
