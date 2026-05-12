@@ -209,3 +209,6 @@ __marimo__/
 
 # VSCode
 .vscode/
+# pixi environments
+.pixi/*
+!.pixi/config.toml
